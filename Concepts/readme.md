@@ -18,12 +18,12 @@
   ok - Account balance with a coin icon on the right.
   ok - "Donation" and "History" buttons in the center (as per Figma).
 - **Donation Cards**: Create 3 donation cards with the following details:
-  - Image on the left.
-  - Donation title.
-  - Donation info.
-  - Current donation amount.
-  - Input field for donation amount.
-  - Button for submitting the donation.
+  ok - Image on the left.
+  ok - Donation title.
+  ok - Donation info.
+  ok - Current donation amount.
+  ok - Input field for donation amount.
+  ok - Button for submitting the donation.
 - **History Section**: Initially hidden and empty.
 
 ## Functionalities

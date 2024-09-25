@@ -1,7 +1,6 @@
 document
   .getElementById('show-donation-section')
   .addEventListener('click', function () {
-    // console.log('show donation section button clicked');
     showSectionById('donate-section');
   });
 

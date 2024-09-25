@@ -20,10 +20,3 @@ function showSectionById(id) {
   // show the section with the provided id as parameter
   document.getElementById(id).classList.remove('hidden');
 }
-
-// document
-//   .getElementById('btn-donate-money')
-//   .addEventListener('click', function () {
-
-//     my_modal_5.showModal();
-//   });

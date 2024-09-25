@@ -30,13 +30,13 @@
           </div>
           <div class="flex">
             <img class="mr-3 size-9" src="./assets/coin.png" alt="" />
-            <div id="account-balance" class="stat-value text-2xl">10500</div>
+            <div id="accountBalance" class="stat-value text-2xl">10500</div>
             <h1 class="ml-3 text-2xl font-bold">BDT</h1>
           </div>
         </div>
       </div>
 
-      <!-- Features Start -->
+      <!-- Navigation Start -->
       <div class="flex justify-center py-7 gap-10">
         <button
           id="show-donation-section"
@@ -51,15 +51,18 @@
           History
         </button>
       </div>
-      <!-- Features End -->
+      <!-- Navigation End -->
     </nav>
     <!-- navbar End -->
+
     <div class="divider"></div>
-    <main class="items-center justify-center">
-      <!-- Card for Donation Start -->
-      <div id="donate-section">
+
+    <main class="container mx-auto items-center justify-center">
+      <!-- Donation Cards Start -->
+      <div id="donate-section" class="space-y-5">
         <!-- Card 1 -->
         <div
+          id="card1"
           class="Card max-w-7xl lg:flex items-center justify-center mx-auto border-2 rounded-xl shadow-lg p-7 gap-5"
         >
           <div class="w-1/2">
@@ -68,7 +71,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="total-donation-card1" class="stat-value text-xl ml-2">
+              <div id="donated1" class="donatedAmount stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -88,15 +91,16 @@
               lives of those in need.
             </p>
             <input
-              id="donation-input1"
+              id="donationInput1"
               class="p-4 w-full my-3 bg-white border rounded-xl"
               type="text"
-              placeholder="Write Donation Amount"
+              placeholder="Enter Donation Amount"
             />
             <br />
             <button
-              id="btn-donate-money"
+              id="btn-donate-money1"
               class="btn mt-4 bg-lime-400 w-full font-extrabold"
+              onclick="donate('donated1', 'donationInput1')"
             >
               Donate Now
             </button>
@@ -105,6 +109,7 @@
 
         <!-- Card 2 -->
         <div
+          id="card2"
           class="Card max-w-7xl lg:flex items-center justify-center mx-auto border-2 rounded-xl shadow-lg p-7 gap-5"
         >
           <div class="w-1/2">
@@ -113,7 +118,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="total-donation-card2" class="stat-value text-xl ml-2">
+              <div id="donated2" class="donatedAmount stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -133,25 +138,25 @@
               need.
             </p>
             <input
-              id="input2"
+              id="donationInput2"
               class="p-4 w-full my-3 bg-white border rounded-xl"
-              type="text"
-              placeholder="Write Donation Amount"
+              type="number"
+              placeholder="Enter Donation Amount"
             />
             <br />
-            <div>
-              <button
-                id="btn-donate-money"
-                class="btn mt-4 bg-lime-400 w-full font-extrabold"
-              >
-                Donate Now
-              </button>
-            </div>
+            <button
+              id="btn-donate-money1"
+              class="btn mt-4 bg-lime-400 w-full font-extrabold"
+              onclick="donate('donated2', 'donationInput2')"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div
+          id="card3"
           class="Card max-w-7xl lg:flex items-center justify-center mx-auto border-2 rounded-xl shadow-lg p-7 gap-5"
         >
           <div class="w-1/2">
@@ -160,7 +165,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="total-donation-card3" class="stat-value text-xl ml-2">
+              <div id="donated3" class="donatedAmount stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -183,29 +188,39 @@
               their time of need.
             </p>
             <input
-              id="input3"
+              id="donationInput3"
               class="p-4 w-full my-3 bg-white border rounded-xl"
-              type="text"
-              placeholder="Write Donation Amount"
+              type="number"
+              placeholder="Enter Donation Amount"
             />
             <br />
-            <div>
-              <button
-                id="btn-donate-money"
-                class="btn mt-4 bg-lime-400 w-full font-extrabold"
-              >
-                Donate Now
-              </button>
-            </div>
+            <button
+              id="btn-donate-money1"
+              class="btn mt-4 bg-lime-400 w-full font-extrabold"
+              onclick="donate('donated3', 'donationInput3')"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </div>
-      <!-- Card for Donation End -->
+      <!-- Donation Cards End -->
 
-      <!-- FAQ Accordion Start -->
-      <div id="blog-section max-w-7xl mx-auto items-center justify-center">
+      <!-- History Section -->
+      <div id="history-section" class="hidden history-section">
+        <h2 class="text-3xl text-center font-bold border border-slate-300 py-2 px-4 rounded-lg bg-slate-200 w-fit shadow-md">Donation History</h2>
+        <div class="my-5">
+          <div id="combinedHistory" class="space-y-2 text-lg"></div>
+        </div>
+      </div>
+
+      <!-- Blog Section Start -->
+      <div
+        id="blog-section"
+        class="hidden blog-section mx-auto items-center justify-center"
+      >
         <h1 class="text-5xl font-extrabold my-12">Important FAQ</h1>
-        <div class="space-y-3">
+        <div class="blog-content mx-auto space-y-3">
           <!-- Accordion 1 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
@@ -263,7 +278,8 @@
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
-              how do you manipulate an element's attributes and styles using the DOM?
+              how do you manipulate an element's attributes and styles using the
+              DOM?
             </div>
             <div class="collapse-content">
               <p>
@@ -281,16 +297,10 @@
           </div>
         </div>
       </div>
-      <!-- FAQ Accordion End -->
-
-      <!-- History Start -->
-      <div id="history-section">
-        <h2 class="text-3xl text-center">History</h2>
-        <div id="history-container" class="space-y-3"></div>
-      </div>
-      <!-- History End -->
+      <!-- Blog End -->
     </main>
 
+    <!-- Modal Start -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
         <h1 class="text-lg font-bold flex justify-center">Congrats!</h1>
@@ -305,12 +315,16 @@
         </div>
       </div>
     </dialog>
+    <!-- Modal End -->
 
-    <footer class="mt-7">
-      <div class="h-24 bg-yellow-50"></div>
+    <!-- footer Start -->
+    <footer class="mt-7 bottom-0">
+      <div class="h-20 bg-yellow-50"></div>
     </footer>
+    <!-- footer End -->
+
     <script src="./js/common.js"></script>
     <script src="./js/donation.js"></script>
-    <script src="./js/Features.js"></script>
+    <script src="./js/navigation.js"></script>
   </body>
 </html>

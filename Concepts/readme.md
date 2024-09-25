@@ -29,19 +29,19 @@
 ## Functionalities
 
 - **Donation and History Button Functionality**:
-  - Clicking the "History" button will hide the donation data and display the history.
-  - Clicking the "Donation" button will hide the history and display the donation data.
+  ok - Clicking the "History" button will hide the donation data and display the history.
+  ok - Clicking the "Donation" button will hide the history and display the donation data.
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
     - The donation input will be deducted from the total account balance, and the updated balance will be shown.
     - The card’s current donation amount will increase.
-    - A meaningful notification will be added to the History section.
+    ok - A meaningful notification will be added to the History section.
 - **Input Validation**:
-  - Show an alert if invalid data is found and stop the transaction.
+  ok - Show an alert if invalid data is found and stop the transaction.
   - Validate the donation amount:
     - If the donation amount is greater than the account balance.
-    - If the input field contains an invalid number.
-    - If the input field is empty.
+    ok - If the input field contains an invalid number.
+    ok - If the input field is empty.
 - **History Section**:
   - The history section will display transaction notifications, including:
     - Date and time of the transaction.

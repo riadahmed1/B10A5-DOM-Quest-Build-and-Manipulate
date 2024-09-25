@@ -68,7 +68,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="card1-total-donation" class="stat-value text-xl ml-2">
+              <div id="total-donation-card1" class="stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -88,7 +88,7 @@
               lives of those in need.
             </p>
             <input
-              id="input-1"
+              id="donation-input1"
               class="p-4 w-full my-3 bg-white border rounded-xl"
               type="text"
               placeholder="Write Donation Amount"
@@ -113,7 +113,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="card1-donation-till-now" class="stat-value text-xl ml-2">
+              <div id="total-donation-card2" class="stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -125,10 +125,15 @@
               >
             </h1>
             <p class="text-gray-700 my-3">
-              The recent floods in Feni have caused significant damage to homes infrastructure. your donation will help provide essential supplies and to those affected by this disaster. Every contribution, big or small, make difference. please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+              The recent floods in Feni have caused significant damage to homes
+              infrastructure. your donation will help provide essential supplies
+              and to those affected by this disaster. Every contribution, big or
+              small, make difference. please join us in supporting the relief
+              efforts and making a positive impact on the lives of those in
+              need.
             </p>
             <input
-              id="input-2"
+              id="input2"
               class="p-4 w-full my-3 bg-white border rounded-xl"
               type="text"
               placeholder="Write Donation Amount"
@@ -155,7 +160,7 @@
           <div class="w-1/2">
             <button class="flex gap-2 bg-slate-200 py-2 px-4 rounded-xl w-auto">
               <img src="./assets/coin.png" alt="" />
-              <div id="card1-donation-till-now" class="stat-value text-xl ml-2">
+              <div id="total-donation-card3" class="stat-value text-xl ml-2">
                 1050
               </div>
               <h1 class="text-xl font-bold">BDT</h1>
@@ -167,10 +172,18 @@
               >
             </h1>
             <p class="text-gray-700 my-3">
-              The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. please consider making a donation support these brave individuals in their time of need.
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. please
+              consider making a donation support these brave individuals in
+              their time of need.
             </p>
             <input
-              id="input-3"
+              id="input3"
               class="p-4 w-full my-3 bg-white border rounded-xl"
               type="text"
               placeholder="Write Donation Amount"
@@ -190,34 +203,80 @@
       <!-- Card for Donation End -->
 
       <!-- FAQ Accordion Start -->
-      <div id="blog-section">
+      <div id="blog-section max-w-7xl mx-auto items-center justify-center">
         <h1 class="text-5xl font-extrabold my-12">Important FAQ</h1>
         <div class="space-y-3">
+          <!-- Accordion 1 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              what is the document object model?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                The Document Object Model (DOM) is a tree-like structure that
+                represents the elements of a web document, allowing developers
+                to dynamically manipulate the content and structure using
+                JavaScript. It enables interactive features on web pages.
+              </p>
             </div>
           </div>
+
+          <!-- Accordion 2 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              how do you select an element from the DOM?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>1. document.getElementById('myId')</p>
+              <p>2. document.getElementsByClassName('myClass')</p>
+              <p>3. document.getElementsByTagName('div')</p>
+              <p>4. document.querySelector('.myClass')</p>
+              <p>5. document.querySelectorAll('.myClass')</p>
             </div>
           </div>
+
+          <!-- Accordion 3 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              what is the event delegation in the context of the DOM and why is
+              it useful?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                Event delegation is a technique where a single event listener is
+                attached to a parent element to manage events for its child
+                elements.
+              </p>
+              <h1 class="font-bold text-lg mt-2">Benefits:</h1>
+              <p>1. Performance: Reduces memory usage.</p>
+              <p>
+                2. Dynamic Content: Automatically applies to new child elements.
+              </p>
+              <p>3. Simpler Code: Less code to maintain.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              how do you manipulate an element's attributes and styles using the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a technique where a single event listener is
+                attached to a parent element to manage events for its child
+                elements.
+              </p>
+              <h1 class="font-bold text-lg mt-2">Benefits:</h1>
+              <p>1. Performance: Reduces memory usage.</p>
+              <p>
+                2. Dynamic Content: Automatically applies to new child elements.
+              </p>
+              <p>3. Simpler Code: Less code to maintain.</p>
             </div>
           </div>
         </div>

@@ -3,20 +3,31 @@ document
   .addEventListener('click', function (event) {
     event.preventDefault();
 
-    const donateMoney = getInputFieldValueById('input-donate-money');
+    function addDonation(cardNumber) {
+      const inputElement = document.getElementById(`donation-input${cardNumber}`);
+      const totalElement = document.getElementById(`total-donation-card${cardNumber}`);
+  
+      const donationAmount = getInputFieldValueById(inputElement.value);
+  
+      if (isNaN(donationAmount) || donationAmount <= 0) {
+          alert("Please enter a valid donation amount.");
+          return;
+      }
 
-    if (isNaN(donateMoney)) {
-      alert('Please enter a valid Donation amount.');
-      return;
-    }
+    // const donateMoney = getInputFieldValueById('input-donate-money');
 
-    if (donateMoney > 0) {
+    // if (isNaN(donateMoney)) {
+    //   alert('Please enter a valid Donation amount.');
+    //   return;
+    // }
+
+    if (donationAmount > 0) {
       my_modal_5.showModal();
-      const card1DonationTillNow = getInputFieldValueById(
-        'card1-total-donation'
+      const card1TotalDonation = getInputFieldValueById(
+        'total-donation-card1'
       );
-      const newCard1DonationBalance = card1DonationTillNow + donateMoney;
-      document.getElementById('card1-total-donation').innerText =
+      const newCard1DonationBalance = card1TotalDonation + donationAmount;
+      document.getElementById('total-donation-card1').innerText =
         newCard1DonationBalance;
 
       // add to Donation History
@@ -33,4 +44,4 @@ document
     } else {
       alert('Failed to Donate Money. Kindly Try Again.');
     }
-  });
+  }});
